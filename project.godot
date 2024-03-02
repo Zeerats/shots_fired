@@ -27,7 +27,7 @@ window/size/viewport_height=1080
 
 [gui]
 
-theme/custom_font="res://assets/fonts/VT323-Regular.ttf"
+theme/custom_font="res://resources/fonts/VT323-Regular.ttf"
 
 [input]
 

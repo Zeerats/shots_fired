@@ -4,14 +4,18 @@ extends PanelContainer
 @onready var value_container = $MarginContainer/PropertyContainer/ValueContainer
 
 var fps
+var velocity
 
 func _ready():
 	visible = false
 	add_property("fps", fps)
+	add_property("velocity", velocity)
 
 func _process(delta):
 	fps = int("%.2f" % (1.0 / delta)) # Works better than: Engine.get_frames_per_second()
 	update_property("fps", fps)
+	velocity = GameManager.player.velocity
+	update_property("velocity", velocity)
 
 func _input(event):
 	if event.is_action_released("debug"):

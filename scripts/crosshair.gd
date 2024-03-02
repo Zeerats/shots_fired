@@ -1,3 +1,4 @@
+# TODO: clamp stuff. Right now the crosshair will spread infinitely with the player's velocity.
 extends CenterContainer
 
 @export var color = Color.WHITE

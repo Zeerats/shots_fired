@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2h5p2ew72uf2"]
+
+[ext_resource type="Texture2D" uid="uid://78oi7gxv4k27" path="res://assets/sunset_water.hdr" id="1_gpsid"]
+[ext_resource type="PackedScene" uid="uid://bgn1diuxidu76" path="res://scenes/player.tscn" id="3_q6qbx"]
+[ext_resource type="ArrayMesh" uid="uid://bfv0cyiwtgmcs" path="res://assets/environment/test_environment.obj" id="3_uqgbh"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_delxw"]
+panorama = ExtResource("1_gpsid")
+
+[sub_resource type="Sky" id="Sky_rhm40"]
+sky_material = SubResource("PanoramaSkyMaterial_delxw")
+
+[sub_resource type="Environment" id="Environment_ic0ft"]
+background_mode = 2
+sky = SubResource("Sky_rhm40")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ic0ft")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.710931, 0.503048, -0.491447, -0.00435033, 0.701943, 0.71222, 0.703249, -0.504201, 0.501221, 0, 7.72652, 0)
+shadow_enabled = true
+
+[node name="Environment" type="CSGMesh3D" parent="."]
+transform = Transform3D(3, 0.00211269, 0.000659378, -0.00211331, 3, 0.00285535, -0.000657394, -0.0028558, 3, 0, 0, 0)
+use_collision = true
+mesh = ExtResource("3_uqgbh")
+
+[node name="Player" parent="." instance=ExtResource("3_q6qbx")]

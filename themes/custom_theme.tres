@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dd0e81wrg6csi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmhxg"]
+bg_color = Color(0.0627451, 0.0627451, 0.0627451, 0.470588)
+shadow_color = Color(0, 0, 0, 0.196078)
+shadow_size = 3
+shadow_offset = Vector2(3, 3)
+
+[resource]
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_nmhxg")
